@@ -86,6 +86,7 @@ class NordicDfu {
     bool? fileInAsset,
     bool? forceDfu,
     int? numberOfPackets,
+    bool? isBinOrHex,
     bool? enableUnsafeExperimentalButtonlessServiceInSecureDfu,
     AndroidSpecialParameter androidSpecialParameter =
         const AndroidSpecialParameter(),
@@ -173,6 +174,7 @@ class NordicDfu {
       'fileInAsset': fileInAsset,
       'forceDfu': forceDfu,
       'numberOfPackets': numberOfPackets,
+      'isBinOrHex': isBinOrHex,
       'enableUnsafeExperimentalButtonlessServiceInSecureDfu':
           enableUnsafeExperimentalButtonlessServiceInSecureDfu,
       ...androidSpecialParameter.toJson(),
