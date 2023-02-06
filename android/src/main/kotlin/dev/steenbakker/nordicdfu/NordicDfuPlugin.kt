@@ -83,7 +83,7 @@ class NordicDfuPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamHan
         val restoreBond = call.argument<Boolean>("restoreBond")
         val startAsForegroundService = call.argument<Boolean>("startAsForegroundService")
         val numberOfPackets = call.argument<Int>("numberOfPackets")
-        val dataDelay = call.argument<Long>("dataDelay")
+        val dataDelay = call.argument<Int>("dataDelay")
         val numberOfRetries = call.argument<Int>("numberOfRetries")
         val isBinOrHex = call.argument<Boolean>("isBinOrHex")
 
@@ -121,7 +121,7 @@ class NordicDfuPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamHan
             startAsForegroundService,
             result,
             numberOfPackets,
-            dataDelay,
+            dataDelay?.toLong(),
             numberOfRetries,
             isBinOrHex
         )
